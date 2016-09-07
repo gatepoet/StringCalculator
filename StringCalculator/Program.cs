@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace StringCalculator
 {
-    class Program
+    public class StringCalculator
     {
-        static void Main(string[] args)
+        public int Add(string numbers)
         {
+            if (numbers == string.Empty)
+                return 0;
+
+            var nums = numbers.Split(',');
+
+            return nums.Sum(Convert.ToInt32);
         }
     }
 }
